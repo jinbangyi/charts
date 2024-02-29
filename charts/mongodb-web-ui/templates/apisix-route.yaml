@@ -1,0 +1,17 @@
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: {{ .Release.Name }}-route
+spec:
+  http:
+  - name: {{ .Release.Name }}-route
+    match: 
+      hosts: {{ .Values.apisixRoute.hosts | toYaml | nindent 8 }}
+      paths:
+      - /*
+    backends:
+      - serviceName: {{ .Values.serviceName }}
+        servicePort: {{ .Values.service.main.ports.http.port }}
+        resolveGranularity: service
+    plugins: {{ .Values.apisixRoute.plugins | toYaml | nindent 6 }}
+    websocket: true

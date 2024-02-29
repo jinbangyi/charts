@@ -1,0 +1,29 @@
+apiVersion: v2
+name: mongodb-web-ui
+description: mongodb web ui.
+home: https://github.com/jinbangyi/charts/mongodb-web-ui/
+icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
+type: application
+version: 0.0.1
+
+appVersion: v23.10.1
+kubeVersion: ">=1.22.0-0"
+keywords:
+  - mongodb
+  - web
+  - ui
+dependencies:
+  - name: common
+    repository: https://bjw-s.github.io/helm-charts
+    version: 1.5.1
+sources:
+  - https://github.com/jinbangyi/compass
+annotations:
+  artifacthub.io/changes: |-
+    - kind: fixed
+      description: Fix ConfigMap Key
+  artifacthub.io/links: |-
+    - name: App Source
+      url: https://github.com/jinbangyi/compass
+    - name: Chart Source
+      url: https://github.com/jinbangyi/charts/mongodb-web-ui

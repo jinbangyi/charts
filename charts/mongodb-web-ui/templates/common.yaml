@@ -1,0 +1,23 @@
+{{/* Append the hardcoded settings */}}
+{{- define "homer.harcodedValues" -}}
+  {{- if .Values.configMaps.config.enabled }}
+  {{/* Append the configMap volume to the volumes */}}
+  persistence:
+    websocket:
+      enabled: true
+      type: configMap
+      name: websocket
+      mountPath: /app/packages/mongodb-browser/src/vars.ts
+      subPath: websocket.ts
+    mongodb:
+      enabled: true
+      type: configMap
+      name: mongodb
+      mountPath: /app/packages/compass-web/sandbox/vars.tsx
+      subPath: mongodb.tsx
+  {{- end }}
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "homer.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.all" . }}
