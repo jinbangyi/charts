@@ -6,12 +6,31 @@ spec:
   http:
   - name: {{ .Release.Name }}-route
     match: 
-      hosts: {{ .Values.apisixRoute.hosts | toYaml | nindent 8 }}
+      hosts: {{ .Values.apisixRoute.httpHosts | toYaml | nindent 8 }}
       paths:
       - /*
     backends:
-      - serviceName: {{ .Values.serviceName }}
+      - serviceName: {{ .Values.apisixRoute.serviceName }}
         servicePort: {{ .Values.service.main.ports.http.port }}
+        resolveGranularity: service
+    plugins: {{ .Values.apisixRoute.plugins | toYaml | nindent 6 }}
+    websocket: true
+---
+
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: {{ .Release.Name }}-ws-route
+spec:
+  http:
+  - name: {{ .Release.Name }}-ws-route
+    match: 
+      hosts: {{ .Values.apisixRoute.websocketHosts | toYaml | nindent 8 }}
+      paths:
+      - /*
+    backends:
+      - serviceName: {{ .Values.apisixRoute.serviceName }}
+        servicePort: {{ .Values.service.main.ports.websocket.port }}
         resolveGranularity: service
     plugins: {{ .Values.apisixRoute.plugins | toYaml | nindent 6 }}
     websocket: true

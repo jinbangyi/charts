@@ -2,19 +2,27 @@
 {{- define "homer.harcodedValues" -}}
   {{- if .Values.configMaps.config.enabled }}
   {{/* Append the configMap volume to the volumes */}}
+  {{- $objectName := (include "bjw-s.common.lib.chart.names.fullname" .) -}}
   persistence:
     websocket:
       enabled: true
       type: configMap
-      name: websocket
+      name: {{ $objectName }}-config
       mountPath: /app/packages/mongodb-browser/src/vars.ts
       subPath: websocket.ts
     mongodb:
       enabled: true
       type: configMap
-      name: mongodb
+      name: {{ $objectName }}-config
       mountPath: /app/packages/compass-web/sandbox/vars.tsx
       subPath: mongodb.tsx
+    # debug propose
+    temp:
+      enabled: true
+      type: configMap
+      name: {{ $objectName }}-config
+      mountPath: /app/temp.txt
+      subPath: temp
   {{- end }}
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "homer.harcodedValues" . | fromYaml) -}}
