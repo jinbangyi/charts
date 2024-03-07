@@ -32,5 +32,4 @@ spec:
       - serviceName: {{ .Values.apisixRoute.serviceName }}
         servicePort: {{ .Values.service.main.ports.websocket.port }}
         resolveGranularity: service
-    plugins: {{ .Values.apisixRoute.plugins | toYaml | nindent 6 }}
     websocket: true
