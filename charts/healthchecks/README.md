@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/gabe565/charts/main/charts/healthchecks/icon.svg" align="right" width="92" alt="healthchecks logo">
 
-![Version: 0.10.0](https://img.shields.io/badge/Version-0.10.0-informational?style=flat)
+![Version: 0.17.0](https://img.shields.io/badge/Version-0.17.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: version-v3.2](https://img.shields.io/badge/AppVersion-version--v3.2-informational?style=flat)
+![AppVersion: version-v3.9](https://img.shields.io/badge/AppVersion-version--v3.9-informational?style=flat)
 
 A cron monitoring tool written in Python & Django
 
 **Homepage:** <https://charts.gabe565.com/charts/healthchecks/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=healthchecks&version=0.10.0)**
+[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=healthchecks&version=0.17.0)**
 
 ## Source Code
 
@@ -26,7 +26,7 @@ Kubernetes: `>=1.22.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | <https://bjw-s.github.io/helm-charts> | common | 1.5.1 |
-| <https://charts.bitnami.com/bitnami> | mariadb | 16.0.2 |
+| <https://charts.bitnami.com/bitnami> | mariadb | 20.1.1 |
 | <https://charts.bitnami.com/bitnami> | postgresql | 14.0.5 |
 
 ## Installing the Chart
@@ -98,11 +98,11 @@ See each database section in [`values.yaml`](./values.yaml) for configuration ex
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | image.repository | string | `"ghcr.io/linuxserver/healthchecks"` | Image repository |
-| image.tag | string | `"version-v3.2"` | Image tag |
+| image.tag | string | `"version-v3.9"` | Image tag |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
-| mariadb | object | See [values.yaml](./values.yaml) | Enable and configure mariadb database subchart under this key.    If enabled, the app's db envs will be set for you.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb) |
+| mariadb | object | See [values.yaml](./values.yaml) | Enable and configure mariadb database subchart under this key.    If enabled, the app's db envs will be set for you.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/mariadb) |
 | persistence.config | object | See [values.yaml](./values.yaml) | Configure persistence settings for the chart under this key.    Necessary for SQLite. |
-| postgresql | object | See [values.yaml](./values.yaml) | Enable and configure postgresql database subchart under this key.    If enabled, the app's db envs will be set for you.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/postgresql) |
+| postgresql | object | See [values.yaml](./values.yaml) | Enable and configure postgresql database subchart under this key.    If enabled, the app's db envs will be set for you.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/postgresql) |
 | service.main | object | See [values.yaml](./values.yaml) | Configures service settings for the chart. |
 
 ---

@@ -11,7 +11,7 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
   # -- image tag
-  tag: version-v24.02
+  tag: version-v24.12.1
 
 # -- environment variables.
 #    For more options see [BookStack .env.example](https://github.com/BookStackApp/BookStack/blob/release/.env.example.complete).
@@ -51,7 +51,7 @@ persistence:
      # size: 1Gi
 
 # -- Enable and configure mariadb database subchart under this key.
-#    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb)
+#    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/mariadb)
 # @default -- See [values.yaml](./values.yaml)
 mariadb:
   enabled: false

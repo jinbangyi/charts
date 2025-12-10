@@ -11,7 +11,7 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
   # -- image tag
-  tag: 2024.2.5
+  tag: latest
 
 # -- environment variables.
 # @default -- See [values.yaml](./values.yaml)
@@ -58,7 +58,7 @@ persistence:
     # size: 1Gi
 
 # -- Enable and configure postgresql database subchart under this key.
-#    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/postgresql)
+#    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/postgresql)
 # @default -- See [values.yaml](./values.yaml)
 postgresql:
   enabled: false

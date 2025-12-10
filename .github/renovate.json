@@ -16,17 +16,6 @@
       "matchStrings": [
         "# ?renovate datasource=(?<datasource>.+?) depName=(?<depName>.+)\\n.+: [\"']?(?<currentValue>.+?)[\"']?\\n"
       ]
-    },
-    {
-      "fileMatch": ["^charts/obico/.*\\.yaml$"],
-      "matchStrings": [
-        "tag: sha-(?<currentDigest>.+)",
-        "appVersion: sha-(?<currentDigest>.+)"
-      ],
-      "datasourceTemplate": "git-refs",
-      "depNameTemplate": "TheSpaghettiDetective/obico-server",
-      "packageNameTemplate": "https://github.com/TheSpaghettiDetective/obico-server",
-      "currentValueTemplate": "release"
     }
   ],
   "packageRules": [
@@ -43,6 +32,11 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/juanfont/headscale"],
       "allowedVersions": "!/^0.23.0$/"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["eqalpha/keydb"],
+      "versioning": "regex:^(?<compatability>.+?)_v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
     }
   ]
 }

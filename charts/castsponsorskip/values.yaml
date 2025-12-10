@@ -15,7 +15,7 @@ controllers:
           # -- image pull policy
           pullPolicy: IfNotPresent
           # -- image tag
-          tag: 0.7.2
+          tag: 0.8.1
         # -- environment variables. [[ref]](https://github.com/gabe565/CastSponsorSkip#configuration)
         # @default -- See [values.yaml](./values.yaml)
         env:
@@ -27,6 +27,9 @@ controllers:
           # CSS_CATEGORIES: sponsor
           # CSS_YOUTUBE_API_KEY: AIzaSyDaGmWKa4JsXZ-HjGw7ISLn_3namBGewQe
           # CSS_NETWORK_INTERFACE:
+        # -- Container security context.
+        securityContext:
+          readOnlyRootFilesystem: true
     # -- Set the controller upgrade strategy
     strategy: RollingUpdate
     pod:
@@ -34,6 +37,9 @@ controllers:
       hostNetwork: true
       # -- When hostNetwork is true set dnsPolicy to `ClusterFirstWithHostNet`
       dnsPolicy: ClusterFirst
+      # -- Pod security context.
+      securityContext:
+        runAsNonRoot: true
 
 # @ignored
 service:

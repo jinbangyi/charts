@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/gabe565/charts/main/charts/obico/icon.svg" align="right" width="92" alt="obico logo">
 
-![Version: 0.3.2](https://img.shields.io/badge/Version-0.3.2-informational?style=flat)
+![Version: 0.6.0](https://img.shields.io/badge/Version-0.6.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: sha-49b9ff207af31db4dc6784f760a3536aa1b76552](https://img.shields.io/badge/AppVersion-sha--49b9ff207af31db4dc6784f760a3536aa1b76552-informational?style=flat)
+![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat)
 
 Obico is a community-built, open-source smart 3D printing platform used by makers, enthusiasts, and tinkerers around the world.
 
 **Homepage:** <https://charts.gabe565.com/charts/obico/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=obico&version=0.3.2)**
+[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=obico&version=0.6.0)**
 
 ## Source Code
 
@@ -27,7 +27,7 @@ Kubernetes: `>=1.22.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | <https://bjw-s.github.io/helm-charts> | common | 1.5.1 |
-| <https://charts.bitnami.com/bitnami> | redis | 18.6.4 |
+| <https://charts.bitnami.com/bitnami> | redis | 20.7.0 |
 
 ## Installing the Chart
 
@@ -96,7 +96,7 @@ N/A
 | podSecurityContext.fsGroup | int | `65534` | Volume binds will be granted to `nobody` group |
 | podSecurityContext.runAsGroup | int | `65534` | Run as `nobody` group |
 | podSecurityContext.runAsUser | int | `65534` | Run as `nobody` user |
-| redis | object | See [values.yaml](./values.yaml) | Enable and configure redis subchart under this key. [[ref]](https://github.com/bitnami/charts/tree/master/bitnami/redis) |
+| redis | object | See [values.yaml](./values.yaml) | Enable and configure redis subchart under this key. [[ref]](https://github.com/bitnami/charts/tree/main/bitnami/redis) |
 | server.additionalContainers.tasks.command | list | See [values.yaml](./values.yaml) | Task command. |
 | server.command | list | See [values.yaml](./values.yaml) | Command to run Obico server. |
 | server.env | string | See [values.yaml](./values.yaml) | Server environment variables. [[ref]](https://github.com/TheSpaghettiDetective/obico-server/blob/master/dotenv.example) |

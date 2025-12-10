@@ -11,7 +11,7 @@ image:
   # -- Image pull policy
   pullPolicy: IfNotPresent
   # -- Image tag
-  tag: 2.5.4
+  tag: 2.14.7
 
 # -- Environment variables [[ref]](https://docs.paperless-ngx.com/configuration/)
 # @default -- See [values.yaml](./values.yaml)
@@ -122,6 +122,11 @@ redis:
   enabled: true
   auth:
     enabled: true
+    username: ""
+    # Use an existing secret for redis auth. Do this if you're using Argo to manage your instance or otherwise using helm template under the hood
+    #     The secret name can vary, but the password key must be redis-password.
+    # existingSecret: paperless-redis
+    # existingSecretPasswordKey: redis-password
   master:
     persistence:
       enabled: false

@@ -7,9 +7,9 @@
 
 image:
   # -- image repository
-  repository: vabene1111/recipes
+  repository: ghcr.io/tandoorrecipes/recipes
   # -- image tag
-  tag: 1.5.13
+  tag: 1.5.31
   # -- image pull policy
   pullPolicy: IfNotPresent
   # -- image tag
@@ -72,7 +72,7 @@ persistence:
     type: emptyDir
     mountPath: /opt/recipes/cookbook/static/django_js_reverse
 
-# -- Enable and configure postgresql database subchart under this key. [[ref]](https://github.com/bitnami/charts/tree/master/bitnami/mariadb)
+# -- Enable and configure postgresql database subchart under this key. [[ref]](https://github.com/bitnami/charts/tree/main/bitnami/mariadb)
 # @default -- See [values.yaml](./values.yaml)
 postgresql:
   enabled: false

@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/vabene1111/recipes/master/docs/logo_color.svg" align="right" width="92" alt="tandoor logo">
 
-![Version: 0.9.0](https://img.shields.io/badge/Version-0.9.0-informational?style=flat)
+![Version: 0.9.9](https://img.shields.io/badge/Version-0.9.9-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: 1.5.13](https://img.shields.io/badge/AppVersion-1.5.13-informational?style=flat)
+![AppVersion: 1.5.31](https://img.shields.io/badge/AppVersion-1.5.31-informational?style=flat)
 
 Application for managing recipes, planning meals, building shopping lists and much much more!
 
 **Homepage:** <https://charts.gabe565.com/charts/tandoor/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=tandoor&version=0.9.0)**
+[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=tandoor&version=0.9.9)**
 
 ## Source Code
 
@@ -88,14 +88,14 @@ N/A
 | env | object | See [values.yaml](./values.yaml) | environment variables. [[ref]](https://github.com/TandoorRecipes/recipes/blob/master/.env.template). |
 | env.TIMEZONE | string | `"UTC"` | default timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"vabene1111/recipes"` | image repository |
-| image.tag | string | `"1.5.13"` | image tag |
+| image.repository | string | `"ghcr.io/tandoorrecipes/recipes"` | image repository |
+| image.tag | string | `"1.5.31"` | image tag |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See [values.yaml](./values.yaml) | Configure persistence settings for the chart under this key. |
 | podSecurityContext.fsGroup | int | `65534` | Volume binds will be granted to `nobody` group |
 | podSecurityContext.runAsGroup | int | `65534` | Run as `nobody` group |
 | podSecurityContext.runAsUser | int | `65534` | Run as `nobody` user |
-| postgresql | object | See [values.yaml](./values.yaml) | Enable and configure postgresql database subchart under this key. [[ref]](https://github.com/bitnami/charts/tree/master/bitnami/mariadb) |
+| postgresql | object | See [values.yaml](./values.yaml) | Enable and configure postgresql database subchart under this key. [[ref]](https://github.com/bitnami/charts/tree/main/bitnami/mariadb) |
 | service.main | object | See [values.yaml](./values.yaml) | Configures service settings for the chart. |
 
 ---

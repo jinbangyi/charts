@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/gabe565/charts/main/charts/bookstack/icon.svg" align="right" width="92" alt="bookstack logo">
 
-![Version: 0.16.0](https://img.shields.io/badge/Version-0.16.0-informational?style=flat)
+![Version: 0.20.0](https://img.shields.io/badge/Version-0.20.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: version-v24.02](https://img.shields.io/badge/AppVersion-version--v24.02-informational?style=flat)
+![AppVersion: version-v24.12.1](https://img.shields.io/badge/AppVersion-version--v24.12.1-informational?style=flat)
 
 A simple, self-hosted, easy-to-use platform for organising and storing information.
 
 **Homepage:** <https://charts.gabe565.com/charts/bookstack/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=bookstack&version=0.16.0)**
+[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=bookstack&version=0.20.0)**
 
 ## Source Code
 
@@ -27,7 +27,7 @@ Kubernetes: `>=1.22.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | <https://bjw-s.github.io/helm-charts> | common | 1.5.1 |
-| <https://charts.bitnami.com/bitnami> | mariadb | 16.0.2 |
+| <https://charts.bitnami.com/bitnami> | mariadb | 20.1.1 |
 
 ## Installing the Chart
 
@@ -89,9 +89,9 @@ N/A
 | env | object | See [values.yaml](./values.yaml) | environment variables.    For more options see [BookStack .env.example](https://github.com/BookStackApp/BookStack/blob/release/.env.example.complete). |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/linuxserver/bookstack"` | image repository |
-| image.tag | string | `"version-v24.02"` | image tag |
+| image.tag | string | `"version-v24.12.1"` | image tag |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
-| mariadb | object | See [values.yaml](./values.yaml) | Enable and configure mariadb database subchart under this key.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb) |
+| mariadb | object | See [values.yaml](./values.yaml) | Enable and configure mariadb database subchart under this key.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/mariadb) |
 | persistence.config | object | See [values.yaml](./values.yaml) | Configure persistence settings for the chart under this key. |
 | podSecurityContext.fsGroup | int | `911` | Volume group permissions |
 | service | object | See [values.yaml](./values.yaml) | Configures service settings for the chart. |

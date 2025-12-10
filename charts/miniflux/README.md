@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/miniflux/logo/40cb83c/icon.svg" align="right" width="92" alt="miniflux logo">
 
-![Version: 0.8.0](https://img.shields.io/badge/Version-0.8.0-informational?style=flat)
+![Version: 0.9.2](https://img.shields.io/badge/Version-0.9.2-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: 2.1.0](https://img.shields.io/badge/AppVersion-2.1.0-informational?style=flat)
+![AppVersion: 2.2.5](https://img.shields.io/badge/AppVersion-2.2.5-informational?style=flat)
 
 Miniflux is a minimalist and opinionated feed reader.
 
 **Homepage:** <https://charts.gabe565.com/charts/miniflux/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=miniflux&version=0.8.0)**
+[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=miniflux&version=0.9.2)**
 
 ## Source Code
 
@@ -93,9 +93,9 @@ N/A
 | env.DATABASE_URL | string | `""` | Postgresql connection parameters. Will be generated if Postgresql subchart is enabled. [[ref]](https://miniflux.app/docs/configuration.html#database-url) |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/miniflux/miniflux"` | image repository |
-| image.tag | string | `"2.1.0"` | image tag |
+| image.tag | string | `"2.2.5"` | image tag |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
-| postgresql | object | Enabled (See [values.yaml](./values.yaml) for more details) | Enable and configure postgresql database subchart under this key.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/postgresql) |
+| postgresql | object | Enabled (See [values.yaml](./values.yaml) for more details) | Enable and configure postgresql database subchart under this key.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/postgresql) |
 | service.main | object | See [values.yaml](./values.yaml) | Configures service settings for the chart. |
 | serviceMonitor.main.allowedNetworks | string | `"127.0.0.1/8"` | List of networks allowed to access the `/metrics` endpoint (comma-separated values).    [[ref]](https://miniflux.app/docs/configuration.html#metrics-allowed-networks) |
 | serviceMonitor.main.enabled | bool | `false` | Enables or disables the serviceMonitor. |

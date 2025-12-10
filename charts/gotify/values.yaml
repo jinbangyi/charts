@@ -11,7 +11,7 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
   # -- image tag
-  tag: 2.4.0
+  tag: 2.6.1
 
 # -- Environment variables. [[ref]](https://gotify.net/docs/config#environment-variables)
 # @default -- See [values.yaml](./values.yaml)
@@ -67,7 +67,7 @@ podSecurityContext:
   fsGroup: 65534
 
 # -- Enable and configure postgresql database subchart under this key.
-#    [[ref]](https://github.com/bitnami/charts/tree/master/bitnami/postgresql)
+#    [[ref]](https://github.com/bitnami/charts/tree/main/bitnami/postgresql)
 # @default -- See [values.yaml](./values.yaml)
 postgresql:
   enabled: false

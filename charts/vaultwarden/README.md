@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/dani-garcia/vaultwarden/d57b699/resources/vaultwarden-icon.svg" align="right" width="92" alt="vaultwarden logo">
 
-![Version: 0.12.0](https://img.shields.io/badge/Version-0.12.0-informational?style=flat)
+![Version: 0.16.1](https://img.shields.io/badge/Version-0.16.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: 1.30.3-alpine](https://img.shields.io/badge/AppVersion-1.30.3--alpine-informational?style=flat)
+![AppVersion: 1.33.2-alpine](https://img.shields.io/badge/AppVersion-1.33.2--alpine-informational?style=flat)
 
 Unofficial Bitwarden compatible server written in Rust.
 
 **Homepage:** <https://charts.gabe565.com/charts/vaultwarden/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=vaultwarden&version=0.12.0)**
+[here](https://github.com/gabe565/charts/issues/new?assignees=gabe565&labels=bug&template=bug_report.yaml&name=vaultwarden&version=0.16.1)**
 
 ## Source Code
 
@@ -26,7 +26,7 @@ Kubernetes: `>=1.22.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | <https://bjw-s.github.io/helm-charts> | common | 1.5.1 |
-| <https://charts.bitnami.com/bitnami> | mariadb | 16.0.2 |
+| <https://charts.bitnami.com/bitnami> | mariadb | 20.1.1 |
 | <https://charts.bitnami.com/bitnami> | postgresql | 14.0.5 |
 
 ## Installing the Chart
@@ -100,14 +100,14 @@ persistence:
 | env.ADMIN_TOKEN | string | `""` | Token for the admin interface, preferably use a long random string.    If not set, the admin panel is disabled.    [[ref]](https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page#secure-the-admin_token) |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/dani-garcia/vaultwarden"` | image repository |
-| image.tag | string | `"1.30.3-alpine"` | image tag |
+| image.tag | string | `"1.33.2-alpine"` | image tag |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
-| mariadb | object | See [values.yaml](./values.yaml) | Enable and configure mariadb database subchart under this key.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb) |
+| mariadb | object | See [values.yaml](./values.yaml) | Enable and configure mariadb database subchart under this key.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/mariadb) |
 | persistence.data | object | See [values.yaml](./values.yaml) | Configure persistence settings for the chart under this key. |
 | podSecurityContext.fsGroup | int | `65534` | Volume binds will be granted to `nobody` group |
 | podSecurityContext.runAsGroup | int | `65534` | Run as `nobody` group |
 | podSecurityContext.runAsUser | int | `65534` | Run as `nobody` user |
-| postgresql | object | See [values.yaml](./values.yaml) | Enable and configure postgresql database subchart under this key.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb) |
+| postgresql | object | See [values.yaml](./values.yaml) | Enable and configure postgresql database subchart under this key.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/main/bitnami/postgresql) |
 | service.main | object | See [values.yaml](./values.yaml) | Configures service settings for the chart. Normally this does not need to be modified. |
 
 ---
